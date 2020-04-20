@@ -14,7 +14,6 @@ public class SmallerNumberThanCurrent {
      *  1, 暴力法
      *      使用两次循环,第一次循环遍历数组元素,第二次循环判断有多少元素小于当前元素
      *      时间复杂度为O(n²),空间复杂度为O(1),只需要一个临时变量
-     *  2,
      *
      * @param nums
      * @return
