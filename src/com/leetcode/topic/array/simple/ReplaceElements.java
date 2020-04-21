@@ -3,7 +3,7 @@ package com.leetcode.topic.array.simple;
 /**
  * @author 李昭
  */
-public class ReplaceEmelents {
+public class ReplaceElements {
 
     /**
      * 1299. 将每个元素替换为右侧最大元素
