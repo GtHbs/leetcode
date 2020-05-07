@@ -79,7 +79,8 @@ public class SpellWord {
                     break;
                 }
                 if (map.containsKey(array[j]) && map.get(array[j]) > 0) {
-                    map.put(array[j],map.get(array[j]--));
+                    Integer integer = map.get(array[j]);
+                    map.put(array[j],--integer);
                 }
             }
             if (!flag) {
