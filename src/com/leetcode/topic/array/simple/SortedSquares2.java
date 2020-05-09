@@ -16,6 +16,8 @@ public class SortedSquares2 {
      *   解法:
      *      1, 暴力法
      *         使用双指针,i每次都是偶数,j每次都是奇数
+     *         时间复杂度低为O(n)空间复杂度高为O(n)效率相对较高
+     *      2, 循环遍历,复杂度O(n²)但是空间复杂度低为O(1)
      *
      * @param A
      * @return
@@ -36,5 +38,20 @@ public class SortedSquares2 {
             }
         }
         return A;
+    }
+
+    public int[] sortArrayByParity(int[] arr) {
+        int[] result = new int[arr.length];
+        int i = 0,j = 1,k = 0;
+        for (;i < arr.length; ++i) {
+            if ((arr[i] & 1) == 0) {
+                result[k] = arr[i];
+                k += 2;
+            } else {
+                result[j] = arr[i];
+                j += 2;
+            }
+        }
+        return result;
     }
 }
