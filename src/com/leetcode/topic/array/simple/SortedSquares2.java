@@ -15,13 +15,26 @@ public class SortedSquares2 {
      *      你可以返回任何满足上述条件的数组作为答案
      *   解法:
      *      1, 暴力法
-     *
+     *         使用双指针,i每次都是偶数,j每次都是奇数
      *
      * @param A
      * @return
      */
     public int[] sortArrayByParityII(int[] A) {
-
+        int j = 1;
+        for (int i = 0; i < A.length - 1; i = i + 2) {
+            //1, 找出偶数位置上不为偶数的元素
+            if ((A[i] & 1) != 0) {
+                //2, 找出奇数位置上不为奇数的元素
+                while ((A[j] & 1) != 0) {
+                    j = j + 2;
+                }
+                //3, 将两个数进行调换
+                int tmp = A[i];
+                A[i] = A[j];
+                A[j] = tmp;
+            }
+        }
         return A;
     }
 }

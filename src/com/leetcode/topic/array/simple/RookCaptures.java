@@ -88,20 +88,4 @@ public class RookCaptures {
         }
         return count;
     }
-
-    public static void main(String[] args) {
-        char[][] board = {
-                    {'.','.','.','.','.','.','.','.'},
-                    {'.','.','.','p','.','.','.','.'},
-                    {'.','.','.','R','.','.','.','p'},
-                    {'.','.','.','.','.','.','.','.'},
-                    {'.','.','.','.','.','.','.','.'},
-                    {'.','.','.','p','.','.','.','.'},
-                    {'.','.','.','.','.','.','.','.'},
-                    {'.','.','.','.','.','.','.','.'},
-                    };
-        RookCaptures captures = new RookCaptures();
-        int i = captures.numRookCaptures(board);
-        System.out.println(i);
-    }
 }
